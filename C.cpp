@@ -74,7 +74,7 @@ void solve()
 	int n;
 	cin>>n;
 	set<vector<int>> ansset;
-	auto helper = [&](auto && helper,int ind ,int sum_rem, vector<int> taken_ind)->void
+	auto helper = [&](auto && helper,int ind ,double sum_rem, vector<int> taken_ind)->void
 	{
 		//base 
 		if(ind==5)
@@ -83,7 +83,7 @@ void solve()
 			ansset.insert(taken_ind);
 			return;
 		}
-		int cur = M[v[ind]];
+		double cur = M[v[ind]];
 		if(cur<=sum_rem)
 		{
 			taken_ind.pb(ind);
